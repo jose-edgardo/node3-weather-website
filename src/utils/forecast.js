@@ -9,7 +9,7 @@ const forecast = (longitud, latitud, callback) => {
         } else if (body.error) {
             callback('nose encontro la localizacion')
         } else {
-            callback(undefined, body.current.weather_descriptions[0] + ' temperatura: ' + body.current.temperature + '. sensacion termica: ' + body.current.feelslike)
+            callback(undefined, body.current.weather_descriptions[0] + ' temperatura: ' + body.current.temperature + '. sensacion termica: ' + body.current.feelslike + ' Humidity is ' + body.current.humidity + '%')
 
         }
     })
